@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <title>(2) Wavely</title>
+    <title>(2) WAVELLY</title>
 
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +17,12 @@
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="alertify/themes/alertify.core.css" />
+    <link rel="stylesheet" href="alertify/themes/alertify.default.css" />
+
 </head>
 
-<body>
+<body onload="forever()">
 
     <div id="wrapper">
 
@@ -37,11 +40,11 @@
               <div class="sidebar-collapse">
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
-                	<center><a class="navbar-brand" href="index.html">WAVELY</a></center><br><br>
+                        <a class="navbar-brand" style="font-family: Arial Black, Gadget, sans-serif;" align="center" href="index.html">WAVELLY</a><br><br>
                     </li> 
 		       <!-- /input-group -->
                     <li>
-                        <a href="index.html"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">10</span></a>
+                        <a href="index.html"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">90</span></a>
                     </li>
                     <li>
 			<a href="index.html"><i class="fa fa-rss fa-fw"></i> RSS Feeds <span class="badge">20</span></a>
@@ -55,16 +58,7 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12"><br>
-		    <div class="alert alert-dismissable alert-warning">
-    			<button class="close" data-dismiss="alert" type="button">[×]</button>
-			    <h4>Bingo!</h4>
-    			    <p>
-			        <span class="label label-warning">2</span> Stocks are hot right now, go get'em!
-			    </p>
-		    </div>
-                </div>
-
+		<br>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -93,630 +87,70 @@
                                         <tr>
                                             <td>AAPL</td>
                                             <td>Apple Inc.</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">540.67</td>
                                             <td class="center">563</td>
                                         </tr>
                                         <tr>
                                             <td>AMZN</td>
                                             <td>Amazon.com, Inc.</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">399.61</td>
                                             <td class="center">405</td>
                                         </tr>
                                         <tr>
                                             <td>CMG</td>
                                             <td>Chipotle Mexican Grill, Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">527.61</td>
                                             <td class="center">543</td>
                                         </tr>
                                         <tr>
                                             <td>GOOG</td>
                                             <td>Google Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">1,150.53</td>
                                             <td class="center">1150</td>
                                         </tr>
                                         <tr>
                                             <td>MA</td>
                                             <td>Mastercard Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">818.42</td>
                                             <td class="center">841</td>
                                         </tr>
                                         <tr>
                                             <td>PCLN</td>
                                             <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
+                                            <td class="center">Sell <i class="fa fa-minus-stop fa-lg"></i></td>
                                             <td class="center">1,178.04</td>
                                             <td class="center">1183</td>
                                         </tr>
                                         <tr>
                                             <td>TQQQ</td>
                                             <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">123.33</td>
                                             <td class="center">124.10</td>
                                         </tr>
                                         <tr>
                                             <td>TWTR</td>
                                             <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">62.20</td>
                                             <td class="center">67</td>
                                         </tr>
                                         <tr>
                                             <td>UPRO</td>
                                             <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
+                                            <td class="center">Hold <i class="fa fa-minus-circle fa-lg"></i></td>
                                             <td class="center">94.45</td>
                                             <td class="center">96.53</td>
                                         </tr>
                                         <tr>
                                             <td>V</td>
                                             <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">232.18</td>
-                                            <td class="center">224.5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>Priceline.com Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
-                                            <td class="center">1,178.04</td>
-                                            <td class="center">1183</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ ETF</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">123.33</td>
-                                            <td class="center">124.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TWTR</td>
-                                            <td>Twitter Inc</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">62.20</td>
-                                            <td class="center">67</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&P 500</td>
-                                            <td class="center"><i class="fa fa-minus-circle fa-lg"></i></td>
-                                            <td class="center">94.45</td>
-                                            <td class="center">96.53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>V</td>
-                                            <td>Visa Inc</td>
-                                            <td class="center"><i class="fa fa-plus-circle fa-lg"></i></td>
+                                            <td class="center">Buy <i class="fa fa-plus-circle fa-lg"></i></td>
                                             <td class="center">232.18</td>
                                             <td class="center">224.5</td>
                                         </tr>
@@ -727,7 +161,7 @@
     </div>
     <ul class="list-group">
        <li class="list-group-item">
-          Hold  <i class="fa fa-minus-circle fa-lg"></i> &nbsp;&nbsp; Buy <i class="fa fa-plus-circle fa-lg"></i>
+          <b>Rating Indicators:</b>  &nbsp;&nbsp; Sell <i class="fa fa-minus-stop fa-lg"></i> &nbsp;&nbsp; | &nbsp;&nbsp; Hold  <i class="fa fa-minus-circle fa-lg"></i> &nbsp;&nbsp; | &nbsp;&nbsp; Buy <i class="fa fa-plus-circle fa-lg"></i>
 			   <span class="pull-right">
                             <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
                                 Disclaimer
@@ -758,7 +192,7 @@ All investors are advised to conduct their own independent research into individ
        </li>
     </ul>
 
-<br><br><center><h10>&copy; 2014 Timothy Marcinowski</h10></center>
+<br><br><center><h10>&copy; 2014 Wavelly, Timothy Marcinowski</h10></center>
 
     <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
@@ -771,6 +205,8 @@ All investors are advised to conduct their own independent research into individ
 
     <!-- SB Admin Scripts - Include with every page -->
     <script src="js/sb-admin.js"></script>
+
+    <script src="alertify/src/alertify.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
@@ -829,6 +265,27 @@ function refreshPage() {
     $(function() {
         $("li#sidenav-resources").addClass("active");
     });
+</script>
+
+<script type="text/javascript">
+function reset () {
+  alertify.set({
+     labels : {
+       ok     : "OK",
+       cancel : "Cancel"
+  },
+       delay : 5000,
+       buttonReverse : false,
+       buttonFocus   : "ok"
+  });
+}
+
+function forever() {
+  reset();
+  alertify.log("<span class='label label-warning'>1</span> &nbsp;&nbsp; Stocks are at <b>BUY</b>", "", 0);
+  alertify.log("<span class='label label-danger'>1</span>  &nbsp;&nbsp; Stocks are at <b>SELL</b>", "", 0);
+  return false;
+}
 </script>
 
 </body>

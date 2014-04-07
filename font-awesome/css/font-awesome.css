@@ -435,11 +435,23 @@
 }
 .fa-plus-circle:before {
   content: "\f055";
-  color: green;
+  color: green; 
+}
+.fa-plus-65:before {
+  content: "\f055";
+  color: blue;
+}
+.fa-sell:before {
+  content: "\f055";
+  color: rgb(240, 173, 78);
 }
 .fa-minus-circle:before {
   content: "\f056";
   color: blue;
+}
+.fa-minus-stop:before {
+  content: "\f056";
+  color: rgb(217, 83, 79);
 }
 .fa-times-circle:before {
   content: "\f057";
@@ -769,9 +781,6 @@
 }
 .fa-google-plus:before {
   content: "\f0d5";
-}
-.fa-money:before {
-  content: "\f0d6";
 }
 .fa-caret-down:before {
   content: "\f0d7";
