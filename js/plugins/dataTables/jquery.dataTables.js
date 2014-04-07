@@ -10813,7 +10813,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search: ",
+			"sSearch": "<i class='fa fa-search fa-lg'></i>&nbsp; ",
 	
 	
 			/**
