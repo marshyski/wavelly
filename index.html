@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='feedModule'>
 
 <head>
 
@@ -22,7 +22,7 @@
 
 </head>
 
-<body onload="forever()">
+<body ng-controller='FeedCtrl' onload="forever()">
 
     <div id="wrapper">
 
@@ -40,14 +40,14 @@
               <div class="sidebar-collapse">
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
-                        <a class="navbar-brand" style="font-family: Arial Black, Gadget, sans-serif;" align="center" href="index.html">WAVELLY</a><br><br>
+                        <a class="navbar-brand" style="font-family: Arial Black, Gadget, sans-serif;" align="center" href="#">WAVELLY</a><br><br>
                     </li> 
 		       <!-- /input-group -->
                     <li>
-                        <a href="index.html"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">10</span></a>
+                        <a href="#stocks"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">10</span></a>
                     </li>
                     <li>
-			<a href="index.html"><i class="fa fa-rss fa-fw"></i> RSS Feeds <span class="badge">20</span></a>
+			<a href="#news"><i class="fa fa-rss fa-fw"></i> News Feeds <span class="badge">8</span></a>
                     </li>
                 </ul>
                 <!-- /#side-menu -->
@@ -56,17 +56,16 @@
         </nav>
         <!-- /.navbar-static-side -->
 
-        <div id="page-wrapper">
+        <div id="page-wrapper" id="top">
             <div class="row">
 		<br>
-                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading heading-large">
-			  <span class="panel-title section-title">Stocks </span>
+			  <span class="panel-title section-title" id="stocks"><b>Stocks </b></span>
 			     <span class="section-toolbar"><a href="javascript:history.go(0)"><i class="fa fa-refresh"></i></a></span>
 			       <span class="pull-right"><button id="refresh" class="btn btn-default btn-sm">Refresh Off</button></span>
                         </div>
@@ -192,7 +191,23 @@ All investors are advised to conduct their own independent research into individ
        </li>
     </ul>
 
-<br><br><center><h10>&copy; 2014 Wavelly, Timothy Marcinowski</h10></center>
+<br><br>
+                <div class="col-lg-12" id="news">
+                    <div class="panel panel-default">
+                        <div class="panel-heading heading-large">
+                          <span class="panel-title section-title"><b>News </b></span>
+                             <span class="section-toolbar"><a href="javascript:history.go(0)"><i class="fa fa-refresh"></i></a></span><br><br>
+		  <div ng-repeat="feed in feeds | orderBy:'title'">
+		        <p><span ng-repeat="item in feed.entries">
+        		<a href="{{item.link}}" target="_blank">{{item.title}}</a><br />
+		        </span></p>
+		  </div>
+		        </div>
+		     </div>
+		<span class="pull-right"><a href="#top">Back to top</a></span>
+		</div>
+		<br><br>
+                <center><h10>&copy; 2014 Wavelly, Timothy Marcinowski</h10></center>
 
     <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
@@ -207,6 +222,11 @@ All investors are advised to conduct their own independent research into individ
     <script src="js/sb-admin.js"></script>
 
     <script src="alertify/src/alertify.js"></script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-resource.min.js"></script>
+    <script src="js/feeds.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
