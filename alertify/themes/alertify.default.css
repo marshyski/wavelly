@@ -64,10 +64,9 @@
 		}
 
 .alertify-log {
-	background: #1F1F1F;
-	background: rgba(0,0,0,.9);
+	background: #777;
 	padding: 15px;
-	border-radius: 4px;
+	border-radius: 8px;
 	color: #FFF;
 	text-shadow: -1px -1px 0 rgba(0,0,0,.5);
 }
