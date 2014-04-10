@@ -1,3 +1,10 @@
+#!/bin/bash
+
+APP_DIR=/opt/wavelly
+DATA_DIR=$APP_DIR/data-symbs
+SYMB_NUM=`wc -l $APP_DIR/data | awk '{ print $1 }'`
+
+cat << HEADER > $APP_DIR/index.html
 <!DOCTYPE html>
 <html ng-app='feedModule'>
 
@@ -45,7 +52,7 @@
                     </li> 
 		       <!-- /input-group -->
                     <li>
-                        <a href="#stocks"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">10</span></a>
+                        <a href="#stocks"><i class="fa fa-bar-chart-o fa-fw"></i> Stocks <span class="badge">$SYMB_NUM</span></a>
                     </li>
                     <li>
 			<a href="#news"><i class="fa fa-rss fa-fw"></i> News Feeds <span class="badge">8</span></a>
@@ -84,76 +91,81 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+HEADER
+
+rm -f $APP_DIR/sell
+touch $APP_DIR/sell
+
+while read line; do
+
+SYMB=`echo $line | awk '{ print $1 }'`
+BUY=`echo $line | awk '{ print $2 }'`
+TARGET=`echo $line | awk '{ print $3 }'`
+SELL=`echo $line | awk '{ print $4 }'`
+
+curl -sf http://finance.yahoo.com/webservice/v1/symbols/$SYMB/quote?format=json > $DATA_DIR/$SYMB
+
+SYM_PR=`cat $DATA_DIR/$SYMB | grep price | awk -F'.' '{ print $1 }' | awk -F'"' '{ print $4 }'`
+SYM_NM=`cat $DATA_DIR/$SYMB | grep '"name"' | awk -F'.' '{ print $1 }' | awk -F'"' '{ print $4 }' | sed 's/[ \t]*$//'`
+SYM_SN=`cat $DATA_DIR/$SYMB | grep '"name"' | awk -F'.' '{ print $1 }' | awk -F'"' '{ print $4 }' | awk '{ print $1 }' | tr '[:upper:]' '[:lower:]'`
+
+if [[ $SYM_PR -gt $BUY ]]; then
+  if [[ $SYM_PR -lt $TARGET ]]; then
+cat << BUY >> $APP_DIR/index.html
                                         <tr>
-                                            <td>AAPL</td>
-                                            <td>Apple Inc</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">530</td>
-                                            <td align="center">570</td>
+                                            <td>$SYMB</td>
+                                            <td>$SYM_NM</td>
+                                            <td align="center"><i class="fa fa-plus-circle fa-lg"></i> Buy</td>
+                                            <td align="center">$SYM_PR</td>
+                                            <td align="center">$TARGET</td>
                                         </tr>
+BUY
+  fi
+fi
+
+if [[ $SYM_PR -ge $TARGET ]]; then
+cat << HOLD >> $APP_DIR/index.html
                                         <tr>
-                                            <td>GOOG</td>
-                                            <td>Google Inc</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">564</td>
-                                            <td align="center">1300</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UPRO</td>
-                                            <td>ProShares UltraPro S&amp;P 500</td>
+                                            <td>$SYMB</td>
+                                            <td>$SYM_NM</td>
                                             <td align="center">&nbsp;<i class="fa fa-minus-circle fa-lg"></i> Hold</td>
-                                            <td align="center">99</td>
-                                            <td align="center">123</td>
+                                            <td align="center">$SYM_PR</td>
+                                            <td align="center">$TARGET</td>
                                         </tr>
+HOLD
+fi
+
+if [[ $SYM_PR -le $BUY ]]; then
+  if [[ $SYM_PR -gt $SELL ]]; then
+cat << HOLDD >> $APP_DIR/index.html
                                         <tr>
-                                            <td>TQQQ</td>
-                                            <td>ProShares UltraPro QQQ</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">61</td>
-                                            <td align="center">88</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AMZN</td>
-                                            <td>Amazon</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">331</td>
-                                            <td align="center">405</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CMG</td>
-                                            <td>Chipotle Mexican Grill, Inc</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">556</td>
-                                            <td align="center">750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>PCLN</td>
-                                            <td>The Priceline Group Inc</td>
+                                            <td>$SYMB</td>
+                                            <td>$SYM_NM</td>
                                             <td align="center">&nbsp;<i class="fa fa-minus-circle fa-lg"></i> Hold</td>
-                                            <td align="center">1234</td>
-                                            <td align="center">1400</td>
+                                            <td align="center">$SYM_PR</td>
+                                            <td align="center">$TARGET</td>
                                         </tr>
+HOLDD
+  fi
+fi
+
+if [[ $SYM_PR -le $SELL ]]; then
+cat << SELL >> $APP_DIR/index.html
                                         <tr>
-                                            <td>FB</td>
-                                            <td>Facebook, Inc</td>
+                                            <td>$SYMB</td>
+                                            <td>$SYM_NM</td>
                                             <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">62</td>
-                                            <td align="center">108</td>
+                                            <td align="center">$SYM_PR</td>
+                                            <td align="center">$TARGET</td>
                                         </tr>
-                                        <tr>
-                                            <td>MA</td>
-                                            <td>Mastercard Incorporated Common</td>
-                                            <td align="center"><i class="fa fa-minus-stop fa-lg"></i> Sell</td>
-                                            <td align="center">73</td>
-                                            <td align="center">83</td>
-                                        </tr>
-                                        <tr>
-                                            <td>TSLA</td>
-                                            <td>Tesla Motors, Inc</td>
-                                            <td align="center">&nbsp;<i class="fa fa-minus-circle fa-lg"></i> Hold</td>
-                                            <td align="center">216</td>
-                                            <td align="center">350</td>
-                                        </tr>
+SELL
+
+echo "$SYMB" >> sell
+fi
+
+done < $APP_DIR/data
+
+cat << 'MIDDLE' >> $APP_DIR/index.html
                                     </tbody>
                                 </table>
                             </div>
@@ -302,14 +314,25 @@ function reset () {
 }
 
 var audio = new Audio('pop.mp3');
+MIDDLE
+
+ALERT_NUM=`wc -l sell | awk '{ print $1 }'`
+
+if [[ $ALERT_NUM != 0 ]]; then
+cat << ALERT >> $APP_DIR/index.html
 function forever() {
   reset();
   audio.play();
-  alertify.log("<span class='label label-danger'>7</span>  &nbsp;&nbsp; Stocks are at <b>SELL</b>", "", 0);
+  alertify.log("<span class='label label-danger'>$ALERT_NUM</span>  &nbsp;&nbsp; Stocks are at <b>SELL</b>", "", 0);
   return false;
 }
+ALERT
+fi
+
+cat << 'FOOTER' >> $APP_DIR/index.html
 </script>
 
 </body>
 
 </html>
+FOOTER
