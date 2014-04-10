@@ -1,4 +1,4 @@
 wavelly
 =======
 
-Wavelly app for stock prediction
+Wavelly app for Elliot Wave stock forecasting platform
