@@ -336,3 +336,5 @@ cat << 'FOOTER' >> $APP_DIR/index.html
 
 </html>
 FOOTER
+
+rm -f sell
