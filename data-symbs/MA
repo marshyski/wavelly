@@ -1,0 +1,26 @@
+{
+"list" : { 
+"meta" : { 
+"type" : "resource-list",
+"start" : 0,
+"count" : 1
+},
+"resources" : [ 
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Mastercard Incorporated Common ",
+"price" : "85.989998",
+"symbol" : "MA",
+"ts" : "1415221253",
+"type" : "equity",
+"utctime" : "2014-11-05T21:00:53+0000",
+"volume" : "7998992"
+}
+}
+}
+
+]
+}
+}

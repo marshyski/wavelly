@@ -1,0 +1,26 @@
+{
+"list" : { 
+"meta" : { 
+"type" : "resource-list",
+"start" : 0,
+"count" : 1
+},
+"resources" : [ 
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Chipotle Mexican Grill, Inc. Co",
+"price" : "642.590027",
+"symbol" : "CMG",
+"ts" : "1415221206",
+"type" : "equity",
+"utctime" : "2014-11-05T21:00:06+0000",
+"volume" : "328227"
+}
+}
+}
+
+]
+}
+}

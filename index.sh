@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_DIR=/opt/wavelly
+APP_DIR=`pwd`
 DATA_DIR=$APP_DIR/data-symbs
 SYMB_NUM=`wc -l $APP_DIR/data | awk '{ print $1 }'`
 
@@ -160,7 +160,7 @@ cat << SELL >> $APP_DIR/index.html
                                         </tr>
 SELL
 
-echo "$SYMB" >> sell
+echo "$SYMB" >> $APP_DIR/sell
 fi
 
 done < $APP_DIR/data
@@ -267,7 +267,7 @@ All investors are advised to conduct their own independent research into individ
 
 <script type="text/javascript">
 // Auto refresh section 
-var int=self.setInterval(function(){refresh()},10000);
+var int=self.setInterval(function(){refresh()},60000);
 
 $(document).ready(function() {
   
@@ -287,7 +287,7 @@ $(document).ready(function() {
 });
 
 // Left bar hightlight active link
-function refreshPage() {
+function refresh() {
   if ($('#refresh').hasClass('refresh-on')) {
     location.hash = 'reload';
     window.location.reload();
@@ -316,7 +316,7 @@ function reset () {
 var audio = new Audio('pop.mp3');
 MIDDLE
 
-ALERT_NUM=`wc -l sell | awk '{ print $1 }'`
+ALERT_NUM=`wc -l $APP_DIR/sell | awk '{ print $1 }'`
 
 if [[ $ALERT_NUM != 0 ]]; then
 cat << ALERT >> $APP_DIR/index.html

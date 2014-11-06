@@ -1,0 +1,26 @@
+{
+"list" : { 
+"meta" : { 
+"type" : "resource-list",
+"start" : 0,
+"count" : 1
+},
+"resources" : [ 
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "ProShares UltraPro S&amp;P 500",
+"price" : "125.680000",
+"symbol" : "UPRO",
+"ts" : "1415221200",
+"type" : "etf",
+"utctime" : "2014-11-05T21:00:00+0000",
+"volume" : "1350009"
+}
+}
+}
+
+]
+}
+}

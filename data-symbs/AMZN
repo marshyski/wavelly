@@ -1,0 +1,26 @@
+{
+"list" : { 
+"meta" : { 
+"type" : "resource-list",
+"start" : 0,
+"count" : 1
+},
+"resources" : [ 
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Amazon.com, Inc.",
+"price" : "296.519989",
+"symbol" : "AMZN",
+"ts" : "1415221200",
+"type" : "equity",
+"utctime" : "2014-11-05T21:00:00+0000",
+"volume" : "4674492"
+}
+}
+}
+
+]
+}
+}
